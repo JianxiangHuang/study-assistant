@@ -24,11 +24,17 @@ require('./config/passport');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
 // Middleware
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  credentials: true
+  credentials: true,
+}));
+app.options('*', cors({
+  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  credentials: true,
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -39,8 +45,14 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
+
+    // ✅ Cross-site cookies (Vercel frontend + Render backend) need SameSite=None + Secure
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+
+    // ✅ Must be true in production for SameSite=None to work (HTTPS required)
+    secure: process.env.NODE_ENV === 'production',
+
     maxAge: 7 * 24 * 60 * 60 * 1000 // 1 week
   }
 }));

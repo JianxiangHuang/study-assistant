@@ -1,0 +1,31 @@
+{
+  "name": "study-assistant-server",
+  "version": "1.0.0",
+  "description": "AI-Powered Study Assistant Backend",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "db:push": "node src/db/migrate.js"
+  },
+  "keywords": ["study", "ai", "flashcards", "education"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.0",
+    "express": "^4.21.0",
+    "express-session": "^1.18.1",
+    "openai": "^4.72.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

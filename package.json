@@ -1,0 +1,28 @@
+{
+  "name": "ai-study-assistant",
+  "version": "1.0.0",
+  "description": "AI-Powered Study Assistant - Full Stack Application",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui"
+  },
+  "keywords": [
+    "study",
+    "ai",
+    "flashcards",
+    "education",
+    "react",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "concurrently": "^9.2.1"
+  }
+}

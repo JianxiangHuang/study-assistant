@@ -8,7 +8,7 @@ A full-stack web application that helps students learn more effectively by using
 
 The frontend application is deployed on **Vercel** and is accessible at:
 
-🔗 https://study-assistant-client-gavxrsvns-jasons-projects-8a12455d.vercel.app/
+🔗 https://study-assistant-client.vercel.app/
 
 Due to **Google OAuth restrictions**, authentication is blocked for public access on the deployed site.  
 However, Google sign-in works correctly when running the application in the **local development environment**.

@@ -21,6 +21,13 @@ The backend API is deployed on **Render** and is available at:
 
 🔗 https://study-assistant-qem3.onrender.com
 
+Google authentication is blocked for public access on the deployed site. 
+Use this link to access as a mock user:
+🔗 https://study-assistant-qem3.onrender.com/api/auth/mock-login?token=IAMAMOCKUSER
+
+
+
+
 Health check endpoint:  
 🔗 https://study-assistant-qem3.onrender.com/api/health
 

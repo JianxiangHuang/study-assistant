@@ -2,6 +2,29 @@
 
 A full-stack web application that helps students learn more effectively by using AI to analyze study materials, extract key concepts, and generate interactive flashcards.
 
+## Deployment
+
+### Frontend (Vercel)
+
+The frontend application is deployed on **Vercel** and is accessible at:
+
+🔗 https://study-assistant-client-gavxrsvns-jasons-projects-8a12455d.vercel.app/
+
+Due to **Google OAuth restrictions**, authentication is blocked for public access on the deployed site.  
+However, Google sign-in works correctly when running the application in the **local development environment**.
+
+---
+
+### Backend (Render)
+
+The backend API is deployed on **Render** and is available at:
+
+🔗 https://study-assistant-qem3.onrender.com
+
+Health check endpoint:  
+🔗 https://study-assistant-qem3.onrender.com/api/health
+
+
 ## 🚀 Features
 
 - **Google OAuth Authentication** - Secure login with Google accounts
@@ -194,26 +217,10 @@ npx playwright test --ui
 ### Analysis
 - `POST /api/analyze` - Analyze content and extract keywords
 
-## 🎨 Key Components
-
-### AuthContext
-Manages authentication state using Context API.
-
-### StudyContext
-Uses `useReducer` for complex state management of study flow.
-
-### Flashcard Component
-Features CSS 3D transform animation for flip effect.
-
-### KeywordHighlight
-Highlights keywords in text with interactive tooltips.
-
-## 📄 License
-
-MIT License
-
-## 🙏 Attribution
-
+## Attribution
+- Claude
+- Github Copilot
+- ChatGPT
 - [OpenAI](https://openai.com/) - AI text analysis
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Lucide](https://lucide.dev/) - Icons

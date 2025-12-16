@@ -13,6 +13,9 @@ The frontend application is deployed on **Vercel** and is accessible at:
 Due to **Google OAuth restrictions**, authentication is blocked for public access on the deployed site.  
 However, Google sign-in works correctly when running the application in the **local development environment**.
 
+Use this link to access as a mock user:
+🔗 https://study-assistant-qem3.onrender.com/api/auth/mock-login?token=IAMAMOCKUSER
+
 ---
 
 ### Backend (Render)
@@ -21,11 +24,11 @@ The backend API is deployed on **Render** and is available at:
 
 🔗 https://study-assistant-qem3.onrender.com
 
+I'm using the free deployment plan, which gets paused during periods of inactivity. It may take up to one minute to reactivate.
+
 Google authentication is blocked for public access on the deployed site. 
 Use this link to access as a mock user:
 🔗 https://study-assistant-qem3.onrender.com/api/auth/mock-login?token=IAMAMOCKUSER
-
-
 
 
 Health check endpoint:  
